@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Love Quiz</title>
+    <link rel="stylesheet" href="assets/image-picker.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #222;
+        }
+        
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 6em;
+            color: rgb(235, 235, 235);
+        }
+        
+        a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 3em;
+            color: rgb(235, 235, 235);
+        }
+        
+        #color001 {
+            color: rgb(235, 235, 235);
+            font-size: 1em;
+            text-align: left;
+        }
+        
+        #center001 {
+            text-align: center;
+        }
+        
+        input {
+            background-color: #555;
+            color: rgb(235, 235, 235);
+        }
+        
+        .button001 {
+            background-color: #88DAC3;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        
+        .button002 {
+            width: 10px;
+            height: 10px;
+        }
+        
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1em;
+        }
+        
+        #message001 {
+            font-size: 10em
+        }
+    </style>
+    <div id="frame001">
+        <div id="color001">
+            <div id="center001">
+
+                <h1>Fill it in ❤️</h1>
+                <p>I love you to the <input type="text" class="check003" id="input001" size="15" /><text class="button002" id="check001"></text> and back and to all the <input id="input002" size="15" /><text class="button002" id="check002"></text> and all
+                    the way to <input id="input003" size="15" /> <text class="button002" id="check003"></text> and to <input id="input004" size="15" /><text class="button002" id="check004"></text> and <input id="input005" size="15" /><text class="button002"
+                        id="check005"></text>.</p>
+                <div id="disappear001">
+                    <div id="center001"><button class="button001" onclick="submit001()">Go</button></div>
+                </div><br />
+                <div id="center001">
+                    <p id="message001"></p>
+                    <p id="reload001"></p>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+        <script>
+            var g;
+            var h;
+            var i;
+            var j;
+            var k;
+
+            function submit001() {
+                b = input001.value.toLowerCase();
+                c = input002.value.toLowerCase();
+                d = input003.value.toLowerCase();
+                e = input004.value.toLowerCase();
+                f = input005.value.toLowerCase();
+                if (b == "moon") {
+                    g = 1;
+                    input001.value = b;
+                    check001.innerHTML = "<text class=button002>" + "✔" + "</text>";
+                } else {
+                    input001.value = b;
+                    check001.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                }
+
+                if (c == "stars") {
+                    h = 1
+                    input002.value = c;
+                    check002.innerHTML = "<text class=button002>" + "✔" + "</text>";
+                } else {
+                    input002.value = c;
+                    check002.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                }
+
+                if (d == "antares") {
+                    i = 1;
+                    input003.value = d;
+                    check003.innerHTML = "<text class=button002>" + "✔" + "</text>";
+                } else {
+                    input003.value = d;
+                    check003.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                }
+
+                if (e == "infinity") {
+                    j = 1;
+                    input004.value = e;
+                    check004.innerHTML = "<text class=button002>" + "✔" + "</text>";
+                } else {
+                    input004.value = e;
+                    check004.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                }
+
+                if (f == "beyond") {
+                    k = 1;
+                    input005.value = f;
+                    check005.innerHTML = "<text class=button002>" + "✔" + "</text>";
+                } else {
+                    input005.value = f;
+                    check005.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                }
+
+                if (g == 1 && h == 1 && i == 1 && j == 1 && k == 1) {
+                    message001.innerHTML = '<a href="https://docs.google.com/document/d/1JcTCbwzc9i2_hQiT1jdy5MaVOQ-s5BsAOUS6NiV9aNY/edit?usp=sharing">Yuh</a>';
+                    disappear001.innerHTML = "";
+                    //reload001.innerHTML = "<div id=center001><button class=button001 onclick=repeat001()>Repeat</button></div>";
+                }
+            }
+
+            function repeat001() {
+                location.reload();
+            }
+        </script>
+</body>
+
+</html>
